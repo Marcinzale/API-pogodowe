@@ -3,7 +3,7 @@ from json import loads
 from terminaltables import AsciiTable
 
 def main():
-    CITY = input("Podaj miasto: ")
+    city = input("Podaj miasto: ")
     url = 'https://danepubliczne.imgw.pl/api/data/synop'
     response = get(url)
     rows = [
@@ -11,7 +11,7 @@ def main():
     ]
 
     for row in loads(response.text):
-        if row['stacja'] == CITY:
+        if row['stacja'] == city:
             rows.append([
                 row['stacja'],
                 row['godzina_pomiaru'],
