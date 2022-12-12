@@ -21,11 +21,11 @@ def main():
 
     table = AsciiTable(rows)
     print(table.table)
-    answer = str.lower(input("Do you want to exit? Enter Y or N: "))
+    answer = str.lower(input("Zakończyć program? Tak (t) lub nie (n): "))
     if answer == 'n':
         main()
     else:
-        print("Goodbye")
+        print("Do zobaczenia!")
         quit()
 
 if __name__ == '__main__':
