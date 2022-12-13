@@ -4,6 +4,7 @@ from terminaltables import AsciiTable
 
 def main():
     city = input("Podaj miasto: ")
+    city = city.capitalize()
     url = 'https://danepubliczne.imgw.pl/api/data/synop'
     response = get(url)
     rows = [
