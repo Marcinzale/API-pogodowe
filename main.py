@@ -9,7 +9,7 @@ def main():
     response = get(url)
     rows = [
         ['Miasto', 'Godzina pomiaru', 'Temperatura', 'Ciśnienie']
-    ]
+    ]       
 
     for row in loads(response.text):
         if row['stacja'] == city:
@@ -18,16 +18,23 @@ def main():
                 row['godzina_pomiaru'],
                 row['temperatura'],
                 row['cisnienie']
-            ])
+            ]) 
+            break
 
+    if row['stacja'] != city:                
+        print(f"Nie ma takiego miasta {city}\n")
+    
     table = AsciiTable(rows)
     print(table.table)
-    answer = str.lower(input("Zakończyć program? Tak (t) lub nie (n): "))
+    print()
+
+    answer = str.lower(input("Zakończyć program? Tak (t) lub nie (n): \n"))
     if answer == 'n':
         main()
     else:
-        print("Do zobaczenia!")
-        quit()
+        print("Do zobaczenia!\n")
+        input('Naciśnij dowolny klawisz aby zamknąć okno...')
+        # quit()
 
 if __name__ == '__main__':
     main()
