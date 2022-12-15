@@ -28,7 +28,7 @@ def main():
     print(table.table)
     print()
 
-    answer = str.lower(input("Zakończyć program? Tak (t) lub nie (n): \n"))
+    answer = str.lower(input("Zakończyć program? Tak (t) lub nie (n): "))
     if answer == 'n':
         main()
     else:
