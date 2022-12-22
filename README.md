@@ -6,4 +6,4 @@ Konsolowa aplikacja w języku Python, która pokazuje pogodę (godzinę pomiaru,
 w mieście podanym przez użytkownika, w Polsce. Dane pobierane są z API wystawionego przez IMGW.
 
 Console application in Python that shows the weather (time of measurement, temperature, atmospheric pressure)
-in a city selectet by user in Poland. The data is downloaded from the API issued by IMGW.
+in a city selectet by the user in Poland. The data is downloaded from the API issued by IMGW.
